@@ -1,6 +1,0 @@
-- login (cristian)
-- registro (victor)
-- Home (max)
-- Registrar vehiculo (ayline)
-- Servicios (Alexis)
-- Agendar hora (max)
