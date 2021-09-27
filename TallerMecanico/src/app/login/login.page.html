@@ -43,10 +43,10 @@
               </ion-row>
               <ion-row>
                   <ion-col>
-                      <ion-button color="dark" type="submit" fill="solid" expand="full">
+                      <ion-button  [routerLink]="['/home']" color="dark" type="submit" fill="solid" expand="full">
                           Entrar
                       </ion-button>
-                      <ion-button color="dark" type="submit" fill="solid" expand="full">
+                      <ion-button [routerLink]="['/registrar']" color="dark" type="submit" fill="solid" expand="full">
                         Registrar
                     </ion-button>
                   </ion-col>
@@ -61,4 +61,4 @@
           </ion-grid>
       </div>
     </ion-slide>
-
+</ion-content>
