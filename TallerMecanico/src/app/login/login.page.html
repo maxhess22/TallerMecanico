@@ -1,0 +1,71 @@
+<ion-content>
+  <div>
+  <ion-row class="row1">
+    <ion-col class="img-container">
+      <img src="assets/img/logo.png">
+    </ion-col>
+</ion-row>
+</div>
+
+  <ion-grid class="grid1">
+
+      <ion-row class="row1">
+          <ion-col>
+
+          </ion-col>
+      </ion-row>
+
+      <ion-row class="row2">
+          <ion-col>
+
+          </ion-col>
+      </ion-row>
+
+  </ion-grid>
+
+  <ion-slide>
+      <div class="contaier-login">
+          <ion-grid>
+              <ion-row>
+                  <ion-col>
+                      <h1>Iniciar Sesión</h1>
+                  </ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col>
+                      <ion-list>
+
+                          <ion-item>
+                              <ion-icon color ="dark" name="person-sharp" class="icon-login"></ion-icon>
+                              <ion-input name="user" type="text" required placeholder="Usuario"></ion-input>
+                          </ion-item>
+                          <br />
+                          <ion-item>
+                            <ion-icon color="dark" name="lock-closed-sharp" class="icon-login"></ion-icon>
+                              <ion-input name="password" type="password" required placeholder="Contraseña"></ion-input>
+                          </ion-item>
+
+                      </ion-list>
+                  </ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col>
+                      <ion-button routerLink="/home" color="dark" type="submit" fill="solid" expand="full">
+                          Entrar
+                      </ion-button>
+                      <ion-button routerLink="/registrar" color="dark" type="submit" fill="solid" expand="full">
+                        Registrar
+                    </ion-button>
+                  </ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col>
+                      <a routerLink="/login">
+                        ¿Olvidó la contraseña?
+                      </a>
+                  </ion-col>
+              </ion-row>
+          </ion-grid>
+      </div>
+    </ion-slide>
+
