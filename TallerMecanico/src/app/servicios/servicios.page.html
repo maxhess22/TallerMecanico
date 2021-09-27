@@ -1,9 +1,83 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>servicios</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
 
-</ion-content>
+  <ion-grid class="grid1">
+
+      <ion-row class="row1">
+          <ion-col>
+            <ion-col class="img-container">
+              <img src="assets/img/logo.png">
+            </ion-col>
+          </ion-col>
+      </ion-row>
+
+      <ion-row class="row2">
+          <ion-col>
+
+          </ion-col>
+      </ion-row>
+
+  </ion-grid>
+
+  <ion-slide>
+      <div class="contaier-login">
+          <ion-grid>
+              <ion-row>
+                  <ion-col>
+                      <h1>Registro</h1>
+                  </ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col>
+                      <ion-list>
+
+                        <ion-item>
+                          <ion-label>Mantencion General</ion-label>
+                          <ion-select placeholder="Select One">
+                            <ion-select-option value="f">Basica</ion-select-option>
+                            <ion-select-option value="m">Completa</ion-select-option>
+                          </ion-select>
+                        </ion-item>
+                          <br />
+                          <ion-item>
+                            <ion-label>Taller Movil</ion-label>
+                            <ion-select placeholder="Select One">
+                              <ion-select-option value="f">Basica</ion-select-option>
+                              <ion-select-option value="m">Completa</ion-select-option>
+                            </ion-select>
+                          </ion-item>
+                          <br>
+                          <ion-item>
+                            <ion-label>Mantencion</ion-label>
+                            <ion-select placeholder="Select One">
+                              <ion-select-option value="f">Basica</ion-select-option>
+                              <ion-select-option value="m">Completa</ion-select-option>
+                            </ion-select>
+                          </ion-item>
+                          <br>
+                          <ion-item>
+                            <ion-label>Mantencion</ion-label>
+                            <ion-select placeholder="Select One">
+                              <ion-select-option value="f">Basica</ion-select-option>
+                              <ion-select-option value="m">Completa</ion-select-option>
+                            </ion-select>
+                          </ion-item>
+                          <br>
+                          <ion-item>
+                            <ion-icon color="dark" name="lock-closed-sharp" class="icon-login"></ion-icon>
+                            <ion-input name="password2" type="password2" required placeholder="Confirmar Contraseña"></ion-input>
+                          </ion-item>
+                      </ion-list>
+                  </ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col>
+                      <ion-button routerLink="/login" color="dark" type="submit" fill="solid" expand="full">
+                        Registrar
+                    </ion-button>
+                  </ion-col>
+              </ion-row>
+          </ion-grid>
+      </div>
+    </ion-slide>
+
+
