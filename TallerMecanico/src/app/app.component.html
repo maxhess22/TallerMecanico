@@ -8,10 +8,32 @@
     </ion-header>
     <ion-content>
       <ion-list>
-        <ion-item>Perfil</ion-item>
-        <ion-item>Agendar hora</ion-item>
-        <ion-item>Horas agendadas</ion-item>
-        <ion-item  [routerLink]="['/']">Cerrar sesion</ion-item>
+      <ion-menu-toggle>
+        <ion-item>
+          <ion-label>Perfil</ion-label>
+          <ion-icon slot="start" name="person-circle-outline"></ion-icon>
+        </ion-item>
+        
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+      <ion-item>
+        <ion-label>Agendar hora</ion-label>
+        <ion-icon slot="start" name="calendar-outline"></ion-icon>
+      </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle>
+        <ion-item>
+          <ion-label>Horas agendadas</ion-label>
+          <ion-icon slot="start" name="checkmark-outline"></ion-icon>
+        </ion-item>
+      </ion-menu-toggle>  
+      <ion-menu-toggle>
+          <ion-item  [routerLink]="['/']">
+          
+            <ion-label>Cerrar sesion</ion-label>
+            <ion-icon slot="start" name="exit-outline"></ion-icon>
+          </ion-item>
+      </ion-menu-toggle>
    
       </ion-list>
     </ion-content>
