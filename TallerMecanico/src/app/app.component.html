@@ -1,3 +1,21 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  
+  <ion-menu side="start" menuId="first" contentId="main">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title> Servi Express</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <ion-item>Perfil</ion-item>
+        <ion-item>Agendar hora</ion-item>
+        <ion-item>Horas agendadas</ion-item>
+        <ion-item  [routerLink]="['/']">Cerrar sesion</ion-item>
+   
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+  
+  <ion-router-outlet  id="main"></ion-router-outlet>
 </ion-app>
