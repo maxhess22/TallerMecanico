@@ -22,19 +22,14 @@ const routes: Routes = [
   {
     path: 'recuperar',
     loadChildren: () => import('./recuperar/recuperar.module').then( m => m.RecuperarPageModule)
-  },  {
+  },
+  {
     path: 'agendas',
     loadChildren: () => import('./agendas/agendas.module').then( m => m.AgendasPageModule)
   },
-<<<<<<< HEAD
-  {
-    path: 'registrar',
-    loadChildren: () => import('./registrar/registrar.module').then( m => m.RegistrarPageModule)
-  },
-  {
-    path: 'recuperar',
-    loadChildren: () => import('./recuperar/recuperar.module').then( m => m.RecuperarPageModule)
-  },
+
+
+
   {
     path: 'servicios',
     loadChildren: () => import('./servicios/servicios.module').then( m => m.ServiciosPageModule)
@@ -42,11 +37,8 @@ const routes: Routes = [
 
 
 ];
-=======
->>>>>>> origin/agendas
 
 
-];
 
 @NgModule({
   imports: [
