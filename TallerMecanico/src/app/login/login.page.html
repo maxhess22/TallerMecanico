@@ -50,10 +50,10 @@
               </ion-row>
               <ion-row>
                   <ion-col>
-                      <ion-button routerLink="/home" color="dark" type="submit" fill="solid" expand="full">
+                      <ion-button  [routerLink]="['/home']" color="dark" type="submit" fill="solid" expand="full">
                           Entrar
                       </ion-button>
-                      <ion-button routerLink="/registrar" color="dark" type="submit" fill="solid" expand="full">
+                      <ion-button [routerLink]="['/registrar']" color="dark" type="submit" fill="solid" expand="full">
                         Registrar
                     </ion-button>
                     <ion-button   color="danger" class = "btn-block" expand="full"><ion-icon name="logo-google"></ion-icon>
@@ -75,3 +75,4 @@
       </div>
     </ion-slide>
 
+</ion-content>
