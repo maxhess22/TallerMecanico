@@ -8,7 +8,7 @@ import { MenuController } from '@ionic/angular';
 })
 export class MenuComponent implements OnInit {
 
-  constructor(private menu: MenuController,) { }
+  constructor(private menu: MenuController) { }
 
   ngOnInit() {}
   
@@ -20,6 +20,7 @@ export class MenuComponent implements OnInit {
   }
   openEnd() {
     this.menu.open('end');
+   
   }
 
   openCustom() {
@@ -28,3 +29,6 @@ export class MenuComponent implements OnInit {
   }
 
 }
+
+
+
