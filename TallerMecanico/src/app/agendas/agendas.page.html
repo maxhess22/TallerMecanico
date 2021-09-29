@@ -1,0 +1,77 @@
+<ion-content>
+  <div>
+  <ion-row class="row1">
+    <ion-col class="img-container">
+      <img src="assets/img/logo.png">
+    </ion-col>
+</ion-row>
+</div>
+  <ion-slide>
+      <div class="contaier-login">
+          <ion-grid>
+              <ion-row>
+                  <ion-col>
+                      <h1>Agenda tu hora</h1>
+                  </ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col>
+                      <ion-list>
+                        <ion-item>
+                          <ion-label>Horarios</ion-label>
+                          <ion-select multiple="false" cancelText="Cancelar" okText="Confirmar">
+                            <ion-select-option value="09:00">09:00</ion-select-option>
+                            <ion-select-option value="10:00">10:00</ion-select-option>
+                            <ion-select-option value="11:00">11:00</ion-select-option>
+                            <ion-select-option value="12:00">12:00</ion-select-option>
+                            <ion-select-option value="14:00">14:00</ion-select-option>
+                            <ion-select-option value="15:00">15:00</ion-select-option>
+                            <ion-select-option value="16:00">16:00</ion-select-option>
+                          </ion-select>
+                        </ion-item>
+                        <br>
+                        <ion-item>
+                          <ion-label>Fecha</ion-label>
+                          <ion-datetime displayFormat="DD MM YYYY" ></ion-datetime>
+                        </ion-item>
+                          <br />
+                          <ion-item>
+                            <ion-label>Marca</ion-label>
+                          <ion-select multiple="false" cancelText="Cancelar" okText="Confirmar">
+                            <ion-select-option value="Chevrolet">Chevrolet</ion-select-option>
+                            <ion-select-option value="Kia">Kia</ion-select-option>
+                            <ion-select-option value="Hyundai">Hyundai</ion-select-option>
+                            <ion-select-option value="Subaru">Subaru</ion-select-option>
+                          </ion-select>
+                          </ion-item>
+                          <br>
+                          <ion-item>
+                            <ion-label>Modelo</ion-label>
+                          <ion-select multiple="false" cancelText="Cancelar" okText="Confirmar">
+                            <ion-select-option value="Sail">Sail</ion-select-option>
+                            <ion-select-option value="Corsa">Corsa</ion-select-option>
+                            <ion-select-option value="Mornig">Mornig</ion-select-option>
+                            <ion-select-option value="Rio">Rio</ion-select-option>
+                            <ion-select-option value="Accent">Accent</ion-select-option>
+                            <ion-select-option value="Tucson">Tucson</ion-select-option>
+                            <ion-select-option value="Legacy">Legacy</ion-select-option>
+                            <ion-select-option value="Impresa">Impresa</ion-select-option>
+                          </ion-select>
+                          <hr>
+                          </ion-item>
+                          <ion-input name="user" type="text" required placeholder="Kilometraje"></ion-input>
+
+                      </ion-list>
+                  </ion-col>
+              </ion-row>
+              <ion-row>
+                  <ion-col>
+                      <ion-button routerLink="/servicios" color="dark" type="submit" fill="solid" expand="full">
+                        Confirmar
+                    </ion-button>
+                  </ion-col>
+              </ion-row>
+          </ion-grid>
+      </div>
+    </ion-slide>
+

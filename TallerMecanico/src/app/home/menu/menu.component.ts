@@ -2,20 +2,20 @@ import { Component, OnInit } from '@angular/core';
 import { MenuController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.page.html',
-  styleUrls: ['./login.page.scss'],
+  selector: 'app-menu',
+  templateUrl: './menu.component.html',
+  styleUrls: ['./menu.component.scss'],
 })
-export class LoginPage implements OnInit {
+export class MenuComponent implements OnInit {
 
   constructor(private menu: MenuController) { }
 
-  ngOnInit() {
-  }
-  openFirst() {
-    this.menu.enable(false, 'first');
-   
+  ngOnInit() {}
   
+  
+  openFirst() {
+    this.menu.enable(true, 'first');
+    this.menu.open('first');
 
   }
   openEnd() {
@@ -28,13 +28,7 @@ export class LoginPage implements OnInit {
     this.menu.open('custom');
   }
 
-
-
-
-
-
-
-
-
-
 }
+
+
+

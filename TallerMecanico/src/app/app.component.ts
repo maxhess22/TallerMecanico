@@ -6,5 +6,25 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  constructor() {}
+
+   desactivado = false;
+  
+  
+   constructor() {}
+   desactivar(){
+    
+    if(this.desactivar){
+      this.desactivado =false;
+
+    }else{
+      this.desactivado= true;
+
+    };
+  
+  
+  
+  }
+
+ 
 }
+

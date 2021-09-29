@@ -23,8 +23,22 @@ const routes: Routes = [
     path: 'recuperar',
     loadChildren: () => import('./recuperar/recuperar.module').then( m => m.RecuperarPageModule)
   },
+  {
+    path: 'agendas',
+    loadChildren: () => import('./agendas/agendas.module').then( m => m.AgendasPageModule)
+  },
+
+
+
+  {
+    path: 'servicios',
+    loadChildren: () => import('./servicios/servicios.module').then( m => m.ServiciosPageModule)
+  },
+
 
 ];
+
+
 
 @NgModule({
   imports: [
