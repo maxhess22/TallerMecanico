@@ -45,3 +45,15 @@ ion-text {
   text-align: center;
   color:gray;
 }
+
+.img-container{
+  width: auto;
+  height: auto;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+img{
+  width: 190px;
+  height: flex;
+}
