@@ -47,19 +47,19 @@
                           <br>
                           <ion-item>
                             <ion-icon color="dark" name="lock-closed-sharp" class="icon-login"></ion-icon>
-                            <ion-input  type="password1" required placeholder="Contraseña" #txtPass></ion-input>
+                            <ion-input  type="password" required placeholder="Contraseña" #txtPass></ion-input>
                           </ion-item>
                           <br>
                           <ion-item>
                             <ion-icon color="dark" name="lock-closed-sharp" class="icon-login"></ion-icon>
-                            <ion-input  type="password2" required placeholder="Confirmar Contraseña" #txtPass2></ion-input>
+                            <ion-input   type="password" required placeholder="Confirmar Contraseña" #txtPass2></ion-input>
                           </ion-item>
                       </ion-list>
                   </ion-col>
               </ion-row>
               <ion-row>
                   <ion-col>
-                      <ion-button (click)="agregar(txtUser, txtCorreo, txtfono, txtPass, txtPass2" color="dark" type="submit" fill="solid" expand="full">
+                      <ion-button (click)="agregar(txtUser, txtCorreo, txtfono, txtPass, txtPass2)" color="dark"   expand="full">
                         Registrar
                     </ion-button>
                   </ion-col>
