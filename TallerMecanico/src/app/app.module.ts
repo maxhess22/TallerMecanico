@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
-
+import {LoginComponent} from "./login/login.component";
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
@@ -11,7 +11,7 @@ import { IonicStorageModule } from '@ionic/storage-angular';
 
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent , LoginComponent],
   entryComponents: [],
   imports: [BrowserModule,
      IonicModule.forRoot(),
