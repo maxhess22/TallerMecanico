@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouteReuseStrategy } from '@angular/router';
-import {LoginComponent} from "./login/login.component";
+import { RouterModule } from '@angular/router';
 import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 
 import { AppComponent } from './app.component';
@@ -11,11 +11,15 @@ import { IonicStorageModule } from '@ionic/storage-angular';
 
 
 @NgModule({
-  declarations: [AppComponent , LoginComponent],
+  declarations: [AppComponent, LoginComponent,
+    ProfileComponent ],
   entryComponents: [],
   imports: [BrowserModule,
      IonicModule.forRoot(),
-      AppRoutingModule, IonicStorageModule.forRoot()],
+      AppRoutingModule, IonicStorageModule.forRoot(), RouterModule.forRoot([
+        { path: '', redirectTo: '/', pathMatch: 'full' },
+        { path: 'login', component: LoginComponent },
+        { path: 'profile', component: ProfileComponent }],;
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],
 })

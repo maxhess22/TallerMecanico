@@ -10,13 +10,13 @@ import { CrudService } from '../crud.service';
 export class LoginPage  {
    nombre ="";
    password ="";
+
   constructor(private crud :CrudService, private alerta: ToastController ) { }
-   login(){
-    console.log(this.nombre);
-    console.log(this.password);
+   Login(){
+     this.crud.rescatar(this.nombre)
    }
   async acceso(txtUser : HTMLInputElement ) {
-    const valor = await this.crud.rescatar(txtUser.value);
+    const valor = await this.crud.rescatar(txtUser.value, );
     if(valor != null){
 
 

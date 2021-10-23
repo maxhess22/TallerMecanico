@@ -37,12 +37,12 @@
 
                           <ion-item>
                               <ion-icon color ="dark" name="person-sharp" class="icon-login"></ion-icon>
-                              <ion-input #txtUser type="text" required placeholder="Usuario"></ion-input>
+                              <ion-input [(ngModel)]= "user" type="text" required placeholder="Usuario"></ion-input>
                           </ion-item>
                           <br />
                           <ion-item>
                             <ion-icon color="dark" name="lock-closed-sharp" class="icon-login"></ion-icon>
-                              <ion-input #txtPass type="password" required placeholder="Contraseña"></ion-input>
+                              <ion-input [(ngModel)]= "password1" type="password" required placeholder="Contraseña"></ion-input>
                           </ion-item>
 
                       </ion-list>
@@ -50,7 +50,7 @@
               </ion-row>
               <ion-row>
                   <ion-col>
-                      <ion-button  [routerLink]="['/home']" color="dark" type="submit" fill="solid" expand="full">
+                      <ion-button  [routerLink]="['/home']" (click)="Login()"color="dark" type="submit" fill="solid" expand="full">
                           Entrar
                       </ion-button>
                       <ion-button [routerLink]="['/registrar']" color="dark" type="submit" fill="solid" expand="full">
