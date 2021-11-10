@@ -28,19 +28,12 @@ const routes: Routes = [
     loadChildren: () => import('./agendas/agendas.module').then( m => m.AgendasPageModule)
   },
 
+
+
   {
     path: 'servicios',
     loadChildren: () => import('./servicios/servicios.module').then( m => m.ServiciosPageModule)
   },
-  {
-    path: 'mecanico',
-    loadChildren: () => import('./mecanico/mecanico.module').then( m => m.MecanicoPageModule)
-  },  {
-    path: 'lista',
-    loadChildren: () => import('./lista/lista.module').then( m => m.ListaPageModule)
-  },
-
-
 
 
 ];
