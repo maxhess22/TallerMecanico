@@ -15,10 +15,7 @@ const routes: Routes = [
     path: 'login',
     loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
   },
-  {
-    path: 'registrar',
-    loadChildren: () => import('./registrar/registrar.module').then( m => m.RegistrarPageModule)
-  },
+ 
   {
     path: 'recuperar',
     loadChildren: () => import('./recuperar/recuperar.module').then( m => m.RecuperarPageModule)
@@ -35,7 +32,8 @@ const routes: Routes = [
   {
     path: 'mecanico',
     loadChildren: () => import('./mecanico/mecanico.module').then( m => m.MecanicoPageModule)
-  },  {
+  },
+  {
     path: 'lista',
     loadChildren: () => import('./lista/lista.module').then( m => m.ListaPageModule)
   },
