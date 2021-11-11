@@ -53,7 +53,7 @@ class ListPersonas(APIView):
         serializer = PersonaSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
-            return Response( serializer.data)
+            return serializer.data
             #return Response({"status": "success", "data": serializer.data}, status=status.HTTP_200_OK)
         else:
             return Response({"status": "error", "data": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
