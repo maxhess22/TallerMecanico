@@ -37,11 +37,11 @@ export class UserCrudService {
         );
     }
 
-    getCliente(id): Observable<Cliente[]> {
-      return this.httpClient.get<Cliente[]>(this.endpoint + '/' + id, this.httpOptions)
+    getCliente(mail: string): Observable<Cliente> {
+      return this.httpClient.get<Cliente>(this.endpoint + '/' + mail, this.httpOptions)
         .pipe(
-          tap(_ => console.log(`Cliente fetched: ${id}`)),
-          catchError(this.handleError<Cliente[]>(`Get Cliente id=${id}`))
+          tap(_ => console.log(`Cliente fetched: ${mail}`)),
+          catchError(this.handleError<Cliente>(`Get Cliente id=${mail}`))
         );
     }
 
