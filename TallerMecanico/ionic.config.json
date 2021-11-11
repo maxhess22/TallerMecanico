@@ -1,7 +1,0 @@
-{
-  "name": "TallerMecanico",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
