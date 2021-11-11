@@ -22,7 +22,6 @@ export class RegistroPage implements OnInit {
         nombreCliente: [''],
         emailCliente: [''],
         telefono: [''],
-        email: [''],
         contraseña: ['']
       })
     }

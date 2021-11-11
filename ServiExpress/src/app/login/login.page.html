@@ -5,5 +5,21 @@
 </ion-header>
 
 <ion-content>
-
+  <ion-list lines="full">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <ion-item>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input formControlName="emailCliente" type="text" required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="floating">contraseña</ion-label>
+        <ion-input formControlName="contraseña" type="password" required></ion-input>
+      </ion-item>
+      <ion-row>
+        <ion-col>
+            <ion-button type="submit" color="danger" expand="block">Guardar</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </ion-list>
 </ion-content>
