@@ -22,6 +22,7 @@ export class UserCrudService {
   //endpoint = 'http://127.0.0.1:8000/api/cliente'
   endpoint = 'https://serviexpress.pythonanywhere.com/api/cliente/';
 
+
   httpOptions = {
     headers: new HttpHeaders({
       'Content-Type': 'application/json',

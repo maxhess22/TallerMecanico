@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>agenda</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      <ion-label>
+        Agendar Hora
+      </ion-label>
+    </ion-list-header>
+
+    <ion-item>
+      <ion-label>Horarios</ion-label>
+      <ion-datetime Name="horario"displayFormat="h:mm " hourValues="9,10,11,12,13,14,15,16" minuteValues="00"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Fecha</ion-label>
+      <ion-datetime Name="fecha"displayFormat="DD/MM/YYYY" min="2022-12-01" max="2022-12-31"></ion-datetime>
+    </ion-item>
+
+
+
+    <ion-item>
+      <ion-label>Marca</ion-label>
+      <ion-select Name="marca"placeholder="Selecione Marca">
+        <ion-select-option >Suzuki</ion-select-option>
+        <ion-select-option >Chevrolet</ion-select-option>
+        <ion-select-option >Hyundai</ion-select-option>
+        <ion-select-option >Kia</ion-select-option>
+        <ion-select-option >Mazda</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Modelo</ion-label>
+      <ion-select Name="modelo"placeholder="Selecione Marca">
+        <ion-select-option >Swift</ion-select-option>
+        <ion-select-option >Corsa</ion-select-option>
+        <ion-select-option >Elantra</ion-select-option>
+        <ion-select-option >Rio</ion-select-option>
+        <ion-select-option >Cx-3</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Kilometraje</ion-label>
+      <ion-input lName= "kilometraje"></ion-input>
+    </ion-item>
+    <ion-row>
+      <ion-col>
+          <ion-button type="submit" color="danger" (click)="onClickAgenda()" expand="block">Agendar</ion-button>
+      </ion-col>
+    </ion-row>
+
+    </ion-list>
+</ion-content>
