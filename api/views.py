@@ -77,7 +77,7 @@ class ListPersonas(APIView):
         
         items = Persona.objects.all()
         serializer = PersonaSerializer(items, many=True)
-        return Response({"status": "success", "data": serializer.data}, status=status.HTTP_200_OK)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
     def delete(self, request, idCliente=None):
         item = get_object_or_404(Persona, idCliente=idCliente)
