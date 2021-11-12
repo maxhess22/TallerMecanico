@@ -19,6 +19,7 @@ export class Cliente {
 
 export class UserCrudService {
 
+  //endpoint = 'http://127.0.0.1:8000/api/cliente'
   endpoint = 'https://serviexpress.pythonanywhere.com/api/cliente/';
 
   httpOptions = {
@@ -37,13 +38,14 @@ export class UserCrudService {
         );
     }
 
-    getCliente(mail: string): Observable<Cliente> {
-      return this.httpClient.get<Cliente>(this.endpoint + '/' + mail, this.httpOptions)
+    getCliente(): Observable<Cliente[]> {
+      return this.httpClient.get<Cliente[]>(this.endpoint + '/' , this.httpOptions)
         .pipe(
-          tap(_ => console.log(`Cliente fetched: ${mail}`)),
-          catchError(this.handleError<Cliente>(`Get Cliente id=${mail}`))
+          tap(_ => console.log(`Cliente fetched: `)),
+          catchError(this.handleError<Cliente[]>(`Get Cliente `))
         );
     }
+
 
     updateCliente(id, cliente: Cliente): Observable<any> {
       return this.httpClient.patch(this.endpoint + '/' + id, JSON.stringify(cliente), this.httpOptions)
