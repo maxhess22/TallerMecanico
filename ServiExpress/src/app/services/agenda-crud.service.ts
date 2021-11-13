@@ -10,6 +10,7 @@ export class Agenda {
   marca: string;
   modelo: string;
   kilometraje: number;
+  cliente : number;
 }
 
 @Injectable({
@@ -45,7 +46,16 @@ export class AgendaCrudService {
       .pipe(
         tap(_ => console.log(`Agenda deleted: ${id}`)),
         catchError(this.handleError<Agenda[]>('Delete Agenda'))
+
+
+
       );
   }
-
+  private handleError<T>(operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
+      console.error(error);
+      console.log(`${operation} failed: ${error.message}`);
+      return of(result as T);
+    };
+  }
 }
