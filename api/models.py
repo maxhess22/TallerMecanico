@@ -16,8 +16,8 @@ class Persona(models.Model):
 
 class Agenda(models.Model):
     idAgenda = models.AutoField(primary_key=True, verbose_name='idAgenda', unique=True)
-    horario = models.CharField(max_length = 10, verbose_name= 'horario')
-    fecha = models.DateField(verbose_name= 'fecha')
+    horario = models.CharField(max_length = 40, verbose_name= 'horario')
+    fecha = models.CharField(max_length = 40,verbose_name= 'fecha')
     marca = models.CharField(max_length = 40, verbose_name= 'marca')
     modelo = models.CharField(max_length = 40, verbose_name= 'modelo')
     kilometraje = models.IntegerField(verbose_name='kilometraje')
