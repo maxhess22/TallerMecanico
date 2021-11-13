@@ -1,3 +1,5 @@
+import { Cliente } from './../services/user-crud.service';
+import { AgendaPage } from './../agenda/agenda.page';
 
 import { Component, OnInit, NgZone } from '@angular/core';
 
@@ -49,26 +51,18 @@ export class LoginPage implements OnInit {
     } else {
       this.userCrudService.getCliente()
         .subscribe(response => {
-
           if ( !response.find(x =>  x.contraseña == formValue.contraseña)) {
             alert("Contraseña erronea");
           } else if (!response.find(x =>  x.emailCliente == formValue.emailCliente)) {
             alert("Email erroneo, cliente no registrado");
           }
-
-
-
-
-
           if (response.find(x => x.emailCliente == formValue.emailCliente && x.contraseña == formValue.contraseña)) {
             alert("Inicio de sesion exitoso");
             this.zone.run(() => {
               this.loginForm.reset();
               this.router.navigate(['/home']);
             })
-
           }
-
         });
     }
   }
