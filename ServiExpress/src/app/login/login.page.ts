@@ -1,12 +1,11 @@
-import { Cliente } from './../services/user-crud.service';
-import { AgendaPage } from './../agenda/agenda.page';
+
 
 import { Component, OnInit, NgZone } from '@angular/core';
 
 import { Router } from '@angular/router';
 import { FormGroup, FormBuilder } from "@angular/forms";
 import { UserCrudService } from '../services/user-crud.service';
-import Swal from 'sweetalert2/dist/sweetalert2.js';
+
 
 
 @Component({

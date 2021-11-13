@@ -9,13 +9,11 @@ import { Router } from '@angular/router';
 })
 export class PerfilClientePage implements OnInit {
 
-  Clientes: any=[];
+  Clientes : any=[];
 
 
   constructor(
-    private UserCrudService: UserCrudService,
-    private router: Router
-  ) { }
+    private UserCrudService: UserCrudService  ) { }
 
   ngOnInit() {}
 

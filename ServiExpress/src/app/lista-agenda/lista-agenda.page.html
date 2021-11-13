@@ -1,10 +1,13 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color = "dark">
     <ion-title>Lista de Agenda</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button  autoHide="false"></ion-menu-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="background">
   <ion-list>
     <ion-item *ngFor="let agenda of Agendas">
       <ion-label>

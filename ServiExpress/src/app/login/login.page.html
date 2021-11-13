@@ -1,13 +1,13 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
+  <ion-toolbar color = "dark">
+    <ion-title>Login</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content color ='dark'>
+<ion-content class="background">
   <ion-card>
     <ion-card-content >
-  
+
       <ion-list lines="full">
       <form [formGroup]="loginForm" > <!--(ngSubmit)="onSubmit()"-->
           <ion-item>
@@ -24,7 +24,7 @@
             </ion-col>
           </ion-row>
         </form>
-      
+
         <ion-button [routerLink]="['/registro']" color="tertiary" type="submit" fill="solid" expand="full">
             Registrar
         </ion-button>
@@ -33,7 +33,7 @@
         </ion-button>
         <ion-button   color="primary" class = "btn-block" expand="full"><ion-icon name="logo-facebook"></ion-icon>
           Iniciar con Facebook
-        </ion-button> 
+        </ion-button>
       </ion-list>
     </ion-card-content>
   </ion-card>
@@ -46,4 +46,3 @@
 
 
 
-  
