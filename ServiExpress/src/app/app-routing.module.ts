@@ -31,10 +31,12 @@ const routes: Routes = [
     path: 'perfil-cliente',
     loadChildren: () => import('./perfil-cliente/perfil-cliente.module').then( m => m.PerfilClientePageModule)
   },
+
   {
-    path: 'update',
-    loadChildren: () => import('./update/update.module').then( m => m.UpdatePageModule)
+    path: 'actualizar/:id',
+    loadChildren: () => import('./actualizar/actualizar.module').then( m => m.ActualizarPageModule)
   },
+
 
 
 ];
