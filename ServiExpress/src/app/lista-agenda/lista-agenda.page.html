@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista de Agenda</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let agenda of Agendas">
+      <ion-label>
+
+        <h2>{{agenda.horario}}</h2>
+        <h3>{{agenda.fecha}}</h3>
+        <h3>{{agenda.marca}}</h3>
+        <h3>{{agenda.modelo}}</h3>
+        <h3>{{agenda.kilometraje}}</h3>
+      </ion-label>
+
+      <div class="item-note" item-end>
+
+        <button ion-button clear (click)="removeAgenda(agenda, agenda.idAgenda)">
+          <ion-icon name="trash" style="zoom:1.5"></ion-icon>
+        </button>
+      </div>
+
+    </ion-item>
+  </ion-list>
+</ion-content>
+

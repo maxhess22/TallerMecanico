@@ -5,11 +5,11 @@ import { Observable, of } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 
 export class Cliente {
-  _id: number;
+  id: number;
   nombreCliente: string;
   emailCliente: string;
   telefono: number;
-  email: string;
+
   contraseña: string;
 }
 
@@ -44,6 +44,13 @@ export class UserCrudService {
         .pipe(
           tap(_ => console.log(`Cliente fetched: `)),
           catchError(this.handleError<Cliente[]>(`Get Cliente `))
+        );
+    }
+    getUser(id): Observable<Cliente[]> {
+      return this.httpClient.get<Cliente[]>(this.endpoint + '/' + id, this.httpOptions)
+        .pipe(
+          tap(_ => console.log(`User fetched: ${id}`)),
+          catchError(this.handleError<Cliente[]>(`Get user id=${id}`))
         );
     }
 

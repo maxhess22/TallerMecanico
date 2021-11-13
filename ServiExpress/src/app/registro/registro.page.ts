@@ -36,7 +36,7 @@ export class RegistroPage implements OnInit {
         .subscribe((response) => {
           this.zone.run(() => {
             this.clienteForm.reset();
-            this.router.navigate(['/home']);
+            this.router.navigate(['/login']);
           })
         });
     }

@@ -4,7 +4,7 @@ import { Observable, of } from 'rxjs';
 import { catchError, tap } from 'rxjs/operators';
 
 export class Agenda {
-  _idAgendad: number;
+  idAgenda: number;
   horario: string;
   fecha: Date;
   marca: string;
@@ -42,10 +42,10 @@ export class AgendaCrudService {
       );
   }
 
-  deleteAgenda(id): Observable<Agenda[]> {
-    return this.httpClient.delete<Agenda[]>(this.endpoint + '/' + id, this.httpOptions)
+  deleteAgenda(idAgenda): Observable<Agenda[]> {
+    return this.httpClient.delete<Agenda[]>(this.endpoint + '/' + idAgenda, this.httpOptions)
       .pipe(
-        tap(_ => console.log(`Agenda deleted: ${id}`)),
+        tap(_ => console.log(`Agenda deleted: ${idAgenda}`)),
         catchError(this.handleError<Agenda[]>('Delete Agenda'))
 
 
