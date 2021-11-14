@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Perfil Cliente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let cliente of Clientes">
+      <ion-label>
+        <h2>{{cliente.idCliente}}</h2>
+        <h2>{{cliente.nombreCliente}}</h2>
+        <h3>{{cliente.emailCliente}}</h3>
+        <h3>{{cliente.telefono}}</h3>
+
+
+      </ion-label>
+
+      <div class="item-note" item-end>
+        <button ion-button clear [routerLink]="['/update/'+cliente.idCliente]">
+          <ion-icon name="create" style="zoom:1.5"></ion-icon>
+        </button>
+      </div>
+
+    </ion-item>
+  </ion-list>
+</ion-content>

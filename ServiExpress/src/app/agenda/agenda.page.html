@@ -1,0 +1,67 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>agenda</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button  autoHide="false"></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-list>
+
+    <form [formGroup]="agendaForm"  (ngSubmit)="onSubmit()">
+    <ion-item>
+      <ion-label>Horarios</ion-label>
+      <ion-datetime formControlName="horario"displayFormat="h:mm " hourValues="9,10,11,12,13,14,15,16" minuteValues="00"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Fecha</ion-label>
+      <ion-datetime formControlName="fecha"displayFormat="YYYY-MM-DD" min="2022-12-01" max="2022-12-31"></ion-datetime>
+    </ion-item>
+
+
+
+    <ion-item>
+      <ion-label>Marca</ion-label>
+      <ion-select formControlName="marca"placeholder="Selecione Marca">
+        <ion-select-option >Suzuki</ion-select-option>
+        <ion-select-option >Chevrolet</ion-select-option>
+        <ion-select-option >Hyundai</ion-select-option>
+        <ion-select-option >Kia</ion-select-option>
+        <ion-select-option >Mazda</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Modelo</ion-label>
+      <ion-select formControlName="modelo"placeholder="Selecione Marca">
+        <ion-select-option >Swift</ion-select-option>
+        <ion-select-option >Corsa</ion-select-option>
+        <ion-select-option >Elantra</ion-select-option>
+        <ion-select-option >Rio</ion-select-option>
+        <ion-select-option >Cx-3</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Kilometraje</ion-label>
+      <ion-input formControlName= "kilometraje"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>cliente</ion-label>
+      <ion-input formControlName="idCli"></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+          <ion-button type="submit" color="success"  expand="block">Agendar</ion-button>
+      </ion-col>
+    </ion-row>
+    </form>
+    </ion-list>
+</ion-content>
